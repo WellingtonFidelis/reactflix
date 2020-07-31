@@ -2,13 +2,17 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
 
 function CadastroCategoria() {
   const initialValues = {
     name: '',
     description: '',
-    color: `#550022`,
+    color: '#550022',
   };
+
+  // prettier-ignore
+
   const [values, setValues] = useState(initialValues);
   const [categorias, setCategorias] = useState([]);
 
@@ -19,22 +23,26 @@ function CadastroCategoria() {
       [chave]: valor, // nome: 'valor'
     });
   }
-
+  // prettier-ignore
   function handleChange(infosDoEvento) {
     setValue(
       infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value
+      infosDoEvento.target.value,
     );
   }
 
   return (
     <PageDefault>
-      <h1>Cadastro de Categoria: {values.nome}</h1>
+      <h1>
+        {' '}
+        Cadastro de Categoria:
+        {values.nome}
+      </h1>
 
       <form
         onSubmit={function handleSubmit(event) {
           event.preventDefault();
-          //console.log('Try send form');
+          // console.log('Try send form');
           setCategorias([...categorias, values]);
           setValues(initialValues);
         }}
@@ -105,20 +113,21 @@ function CadastroCategoria() {
           </div>
         */}
 
-        <button
-          className="btn btn-primary col-md-5"
+        <Button
+          type="button"
+          className="btn btn-secondary col-md-5"
           data-toggle="button"
           aria-pressed="false"
-          autocomplete="off"
+          autoComplete="off"
         >
           Cadastrar
-        </button>
+        </Button>
       </form>
 
       <ul>
-        {categorias.map((categoria, index) => {
-          return <li key={`${categoria}${index}`}>{categoria.name}</li>;
-        })}
+        {categorias.map((categoria) => (
+          <li key={`${categoria.nome}`}>{categoria.name}</li>
+        ))}
       </ul>
 
       <Link to="/">Ir para home</Link>
@@ -127,9 +136,11 @@ function CadastroCategoria() {
 }
 
 export default CadastroCategoria;
-/*function handleInputCategoria(event) {
+/*
+  function handleInputCategoria(event) {
                 //console.log(values);
                 //console.log(event.target.value);
                 //setNomeDaCategoria(event.target.value);
                 //setValue(event.target.getAttribute('name'), event.target.value);
-                }*/
+                }
+*/
