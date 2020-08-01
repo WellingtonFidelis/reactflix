@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
   const initialValues = {
@@ -13,24 +14,8 @@ function CadastroCategoria() {
   };
 
   // prettier-ignore
-
-  const [values, setValues] = useState(initialValues);
+  const { values, handleChange, clearForm } = useForm(initialValues);
   const [categorias, setCategorias] = useState([]);
-
-  function setValue(chave, valor) {
-    // chave: nome, descricao, bla, bli
-    setValues({
-      ...values,
-      [chave]: valor, // nome: 'valor'
-    });
-  }
-  // prettier-ignore
-  function handleChange(infosDoEvento) {
-    setValue(
-      infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value,
-    );
-  }
 
   // ============
 
@@ -51,24 +36,33 @@ function CadastroCategoria() {
   }, []);
 
   return (
+    // prettier-ignore
     <PageDefault>
       <h1>
         {' '}
         Cadastro de Categoria:
-        {values.nome}
+        {' '}
+        {values.name}
       </h1>
 
       <form
         onSubmit={function handleSubmit(event) {
+          // prettier-ignore
           event.preventDefault();
           // console.log('Try send form');
-          setCategorias([...categorias, values]);
-          setValues(initialValues);
+          setCategorias([
+            ...categorias,
+            values,
+          ]);
+          // console.log(setCategorias([...categorias, values]));
+          // console.log(values);
+          // console.log(categorias);
+          clearForm();
         }}
       >
         <FormField
           label="Nome da Categoria"
-          type="text"
+          // type="text"
           value={values.name}
           name="name"
           onChange={handleChange}
@@ -139,7 +133,7 @@ function CadastroCategoria() {
       <ul>
         {categorias.map((categoria, index) => (
           // eslint-disable-next-line react/no-array-index-key
-          <li key={`${categoria.nome}${index}`}>{categoria.name}</li>
+          <li key={`${categoria.titulo}${index}`}>{categoria.titulo}</li>
         ))}
       </ul>
 
