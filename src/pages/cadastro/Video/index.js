@@ -26,7 +26,7 @@ function CadastrarVideo() {
 
   return (
     <PageDefault>
-      <h1>Cadastro de Video</h1>
+      <h1 style={{ textAlign: 'center' }}>Cadastro de Video</h1>
 
       <form
         onSubmit={(event) => {
@@ -72,7 +72,15 @@ function CadastrarVideo() {
           suggestions={categoryTitles}
         />
 
-        <Button type="submit" className="btn col-md-5 btn-danger">
+        <Button
+          type="submit"
+          className="btn col-md-5 btn-danger"
+          style={{
+            marginBottom: '25px',
+            display: 'block',
+            margin: '0 auto',
+          }}
+        >
           Cadastrar
         </Button>
       </form>

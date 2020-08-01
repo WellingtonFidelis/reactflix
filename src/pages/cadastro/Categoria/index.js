@@ -38,7 +38,7 @@ function CadastroCategoria() {
   return (
     // prettier-ignore
     <PageDefault>
-      <h1>
+      <h1 style={{ textAlign: 'center' }}>
         {' '}
         Cadastro de Categoria:
         {' '}
@@ -125,7 +125,16 @@ function CadastroCategoria() {
             </label>
           </div>
         */}
-        <Button className="btn col-md-5 btn-danger">Cadastrar</Button>
+        <Button
+          className="btn col-md-5 btn-danger"
+          style={{
+            marginBottom: '25px',
+            display: 'block',
+            margin: '0 auto',
+          }}
+        >
+          Cadastrar
+        </Button>
       </form>
 
       {categorias.length === 0 && <div>Loading...</div>}

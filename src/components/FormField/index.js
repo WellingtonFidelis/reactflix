@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 
 const FormFieldWrapper = styled.div`
   position: relative;
+  margin: 0 auto;
   textarea {
     min-height: 150px;
   }
