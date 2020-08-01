@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
@@ -63,6 +64,7 @@ const Input = styled.input`
   &:hover {
     border-bottom: 3px solid purple;
     ::-webkit-input-placeholder {
+      transition: 0.3s;
       transform: scale(0.7) translateY(-28px) translateX(-95px);
     }
   }

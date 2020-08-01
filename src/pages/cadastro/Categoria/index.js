@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable linebreak-style */
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
@@ -8,7 +9,7 @@ function CadastroCategoria() {
   const initialValues = {
     name: '',
     description: '',
-    color: '#550022',
+    color: '#005522',
   };
 
   // prettier-ignore
@@ -30,6 +31,22 @@ function CadastroCategoria() {
       infosDoEvento.target.value,
     );
   }
+
+  // ============
+
+  useEffect(() => {
+    if (window.location.href.includes('localhost')) {
+      const URL = 'http://localhost:8080/categorias';
+      fetch(URL).then(async (respostaDoServer) => {
+        if (respostaDoServer.ok) {
+          const resposta = await respostaDoServer.json();
+          setCategorias([...resposta]);
+          return;
+        }
+        throw new Error('Não foi possível pegar os dados');
+      });
+    }
+  }, []);
 
   return (
     <PageDefault>
@@ -112,21 +129,15 @@ function CadastroCategoria() {
             </label>
           </div>
         */}
-
-        <Button
-          type="button"
-          className="btn btn-secondary col-md-5"
-          data-toggle="button"
-          aria-pressed="false"
-          autoComplete="off"
-        >
-          Cadastrar
-        </Button>
+        <Button className="btn col-md-5 btn-danger">Cadastrar</Button>
       </form>
 
+      {categorias.length === 0 && <div>Loading...</div>}
+
       <ul>
-        {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>{categoria.name}</li>
+        {categorias.map((categoria, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <li key={`${categoria.nome}${index}`}>{categoria.name}</li>
         ))}
       </ul>
 

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import SlickSlider from 'react-slick';
@@ -38,12 +39,13 @@ export const SliderItem = styled.li`
   }
 `;
 
+// eslint-disable-next-line react/prop-types
 const Slider = ({ children }) => (
   <Container>
     <SlickSlider
       {...{
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 300,
         centerMode: false,
         variableWidth: true,

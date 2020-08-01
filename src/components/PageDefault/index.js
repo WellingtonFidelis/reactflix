@@ -1,7 +1,8 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
+import styled from 'styled-components';
 import Menu from '../Menu';
 import Footer from '../Footer';
-import styled from 'styled-components';
 
 const Main = styled.main`
   background-color: var(--black);
@@ -12,6 +13,7 @@ const Main = styled.main`
   padding-right: 5%;
 `;
 
+// eslint-disable-next-line react/prop-types
 function PageDefault({ children }) {
   return (
     <>

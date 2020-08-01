@@ -20,5 +20,7 @@ ReactDOM.render(
       <Route component={Pagina404} />
     </Switch>
   </BrowserRouter>,
+  // prettier-ignore
+  // eslint-disable-next-line comma-dangle
   document.getElementById('root')
 );
