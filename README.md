@@ -4,7 +4,7 @@ Project created on Imersão week idealized by Alura group dev.
 
 This project helps people to organize themselves with the movies that they need to watch.
 
-[![wellflix](.jpg?sanitize=1)](https://github.com/WellingtonFidelis/reactflix)
+![wellflix](https://github.com/WellingtonFidelis/reactflix/blob/master/src/portifolio/screenHomeWellflix_1.png)(https://github.com/WellingtonFidelis/reactflix)
 
 ## Getting Started
 
@@ -12,16 +12,14 @@ See all videos that you need to see separeted by categories and more...
 
 ### Desktop
 
-[![wellflix](?sanitize=1)](https://github.com/WellingtonFidelis/reactflix)
-[![wellflix](https:?sanitize=1)](https://github.com/WellingtonFidelis/reactflix)
-[![wellflix](https:?sanitize=1)](https://github.com/WellingtonFidelis/reactflix)
+![wellflix](https://github.com/WellingtonFidelis/reactflix/blob/master/src/portifolio/screenHomeWellflix_2.png?raw=true?sanitize=1)(https://github.com/WellingtonFidelis/reactflix)
+[![wellflix](https://github.com/WellingtonFidelis/reactflix/blob/master/src/portifolio/screenHomeWellflix_3.png?raw=true?sanitize=1)](https://github.com/WellingtonFidelis/reactflix)
+[![wellflix](https://github.com/WellingtonFidelis/reactflix/blob/master/src/portifolio/screenCadastroVideoWellflix_1.png?raw=true?sanitize=1)](https://github.com/WellingtonFidelis/reactflix)
+[![wellflix](https://github.com/WellingtonFidelis/reactflix/blob/master/src/portifolio/screenCadastroCategoriaWellflix_1.png?raw=true?sanitize=1)](https://github.com/WellingtonFidelis/reactflix)
 
 ### Mobile
 
-[![wellflix](https://?sanitize=1)](https://github.com/WellingtonFidelis/reactflix)
-[![wellflix](https://github.com/WellingtonFidelis/reactflix/blob/master/portfolio/mobile2.jpeg?sanitize=1)](https://github.com/WellingtonFidelis/reactflix)
-[![wellflix](https://github.com/WellingtonFidelis/reactflix/blob/master/portfolio/mobile3.jpeg?sanitize=1)](https://github.com/WellingtonFidelis/reactflix)
-[![wellflix](https://github.com/WellingtonFidelis/reactflix/blob/master/portfolio/mobile4.jpeg?sanitize=1)](https://github.com/WellingtonFidelis/reactflix)
+ The same.
 
 ### Prerequisites
 
